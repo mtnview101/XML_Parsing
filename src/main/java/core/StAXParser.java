@@ -7,8 +7,8 @@ import javax.xml.stream.*;
 public class StAXParser {
 	public static void main(String[] args) throws XMLStreamException, IOException {
 
-		URL url = new URL("http://alex.academy/ebay.xml");
-
+		//URL url = new URL("http://alex.academy/ebay.xml"); http://www.ebay.com/sch/i.html?_odkw=sony&_nkw=sony&country_id=1&lang_id=1
+		URL url = new URL("http://www.ebay.com/sch/i.html?_odkw=sony&_nkw=sony&country_id=1&lang_id=1");
 		final String element_01 = "orig-kw";
 		final String element_02 = "engine";
 		final String element_03 = "kadu-version";
