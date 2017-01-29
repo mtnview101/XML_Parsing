@@ -10,6 +10,7 @@ public class DOMParser {
 String url = "http://alex.academy/ebay.xml";
 
 String node = "kadu-response";
+String element_001 = "server";
 String element_01 = "orig-kw";
 String element_02 = "engine";
 String element_03 = "kadu-version";
@@ -29,7 +30,7 @@ System.out.println("Engine: \t "+ ((Element) doc.getElementsByTagName(node).item
 System.out.println("Version: \t "+ ((Element) doc.getElementsByTagName(node).item(0)).getElementsByTagName(element_03).item(0).getChildNodes().item(0).getNodeValue());
 System.out.println("Response: \t "+ ((Element) doc.getElementsByTagName(node).item(0)).getElementsByTagName(element_04).item(0).getChildNodes().item(0).getNodeValue());*/
 
-System.out.println("Key: \t\t "+ ((Element) doc.getElementsByTagName(node).item(0)).getElementsByTagName(element_01).item(0).getChildNodes().item(0));
+System.out.println("Key: \t\t "+ ((Element) doc.getElementsByTagName(element_001).item(0)).getElementsByTagName(element_01).item(0).getChildNodes().item(0).getNodeValue());
 System.out.println("Engine: \t "+ ((Element) doc.getElementsByTagName(node).item(0)).getElementsByTagName(element_02).item(0).getChildNodes().item(0).getNodeValue());
 System.out.println("Version: \t "+ ((Element) doc.getElementsByTagName(node).item(0)).getElementsByTagName(element_03).item(0).getChildNodes().item(0).getNodeValue());
 System.out.println("Response: \t "+ ((Element) doc.getElementsByTagName(node).item(0)).getElementsByTagName(element_04).item(0).getChildNodes().item(0).getNodeValue());			
